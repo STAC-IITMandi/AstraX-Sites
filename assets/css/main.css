@@ -113,7 +113,11 @@ ul li {
  */
 
 #countdown {
-    font-weight: 500;
+    font-weight: bold;
+    color: rgb(240, 234, 234);
+    /* color: black; */
+    font-family: 'Laila', sans-serif;
+    font-size: 2rem;
 }
 
 .landing {
@@ -125,10 +129,22 @@ ul li {
     white-space: pre-wrap;
     font-weight: 500;
     color: white;
-    background-color: darkblue;
+    background-color: #232248;
     border-radius: 30px;
     padding: 10px 20px;
+    text-transform: capitalize;
+    text-decoration: none;
 }
+
+.countdown-links a:hover {
+    background-color: #308fcb;
+}
+
+#dates {
+    text-transform: capitalize;
+    font-family: 'Laila', sans-serif;
+}
+
 
 /* 
  * 4.0 Navigation
@@ -151,7 +167,7 @@ ul li {
 .navbar-custom .navbar-nav>li>a {
     color: #fff;
     /* text-transform: uppercase; */
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     border-bottom: 1px solid transparent;
 }
@@ -191,9 +207,13 @@ ul li {
 @media (max-width: 767.98px) {
     .navbar-solid-header {
         /*Dont use !important or it will always have grey bg when uncollapsed*/
-        background-color: #4e4e4e;
+        background-color: #232248;
         -webkit-transition: all 0.2s linear 0s;
         transition: all 0.2s linear 0s;
+    }
+    #countdown {
+        visibility: hidden;
+        display: none;
     }
 }
 
@@ -228,7 +248,7 @@ ul li {
     min-height: 100vh;
     position: relative;
     text-align: center;
-    background: url('../images/backgrounds/landing.jpg') no-repeat left;
+    background: linear-gradient(to left, rgba(8, 9, 10, 0.4), rgba(8, 9, 10, 0)), url('../images/backgrounds/landing.jpg') no-repeat center;
     background-size: cover;
     display: table;
 }
@@ -347,8 +367,9 @@ ul li {
 }
 
 .bg-overlay {
-    background: url("../images/backgrounds/events.jpg");
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(78, 78, 256, 0.2), rgba(256, 256, 256, 0)), url("../images/backgrounds/doodle.webp");
+    /* background: linear-gradient(rgba(42, 42, 147, 0.2), rgba(256, 256, 256, 0)), url("../images/backgrounds/doodle.png"); */
+    /* background: linear-gradient(rgba(6, 137, 174, 0.2), rgba(256, 256, 256, 0)), url("../images/backgrounds/doodle.png"); */
     background-size: cover;
     background-position: center center;
     color: #fff;
@@ -698,8 +719,9 @@ ul li {
     padding-top: 20px;
         background: #3dac9c;
     text-align: left;
-        color: #fff;
-    }
+    color: #fff;
+    font-size: 18px;
+}
 
 .footer-top h4 {
     padding-bottom: 5px;
@@ -735,6 +757,7 @@ ul li {
 .footer-contact p, .footer-links p {
     padding: 0;
     margin-bottom: 5px;
+    font-size: 18px;
 }
 
 .footer-contact p a {
